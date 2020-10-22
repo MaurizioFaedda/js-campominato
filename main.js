@@ -5,8 +5,18 @@
 
 var minesList = [];
 var flowersList = [];
-var numMines = 3;
-var maxMines = 10;
+var numMines = 16;
+var gameLevelByUser = parseInt(prompt('Benvenuto a questo gioco di campo minato. \nPrima di iniziare scegli la difficoltà di gioco tra 0, 1, e 2. \n0= facile;\n1=media;\n2=difficile;'))
+var maxMines;
+if (gameLevelByUser === 0) {
+    maxMines = 100;
+} else if (gameLevelByUser === 1) {
+    maxMines = 80;
+} else if (gameLevelByUser === 2) {
+    maxMines = 50;
+}
+
+console.log("Ci sono 16 mine su un totale di " + maxMines + "nuemri");
 var maxPoint = maxMines - numMines;
 
 // genero da 1 a maxMines numeri
